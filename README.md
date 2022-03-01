@@ -1,6 +1,6 @@
 # GZMatchedTransformEffect
 
-<img src="https://user-images.githubusercontent.com/4470629/156162433-5d6d4b56-1789-4b39-9661-99da713786dc.gif" width="400"></img>
+<img src="https://user-images.githubusercontent.com/4470629/156162433-5d6d4b56-1789-4b39-9661-99da713786dc.gif" width="550"></img>
 
 Create a smooth transition between any two SwiftUI Views. It is very similar to the built-in `.matchedGeometryEffect()` modifier, but the effect is much smoother.
 
@@ -33,14 +33,14 @@ struct Example: View {
                 view1
                     .fixedSize()
                     .id("view1")
-                    .matchedTransformEffect(id: "transition", in: ns)
+                    .matchedTransformEffect(id: "transition", in: ns) // ⬅️
             }
 
             if !flag {
                 view2
                     .fixedSize()
                     .id("view2")
-                    .matchedTransformEffect(id: "transition", in: ns)
+                    .matchedTransformEffect(id: "transition", in: ns) // ⬅️
             }
 
             Button(action: { withAnimation { flag.toggle() } }) {
