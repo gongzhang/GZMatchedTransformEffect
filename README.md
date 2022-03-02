@@ -20,6 +20,9 @@ dependencies: [
 2. Control the appearance and disappearance of two views in a `withAnimation` block
 
 ```swift
+import SwiftUI
+import GZMatchedTransformEffect
+
 struct Example: View {
     @State private var flag = true
     @Namespace private var ns
@@ -35,6 +38,8 @@ struct Example: View {
                     .id("view1")
                     .matchedTransformEffect(id: "transition", in: ns) // ⬅️
             }
+            
+            Spacer()
 
             if !flag {
                 view2
